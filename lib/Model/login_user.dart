@@ -16,7 +16,7 @@ class LoginUser{
     if (object['MO'] !=   null) {
       return LoginUser(
         user:  User.fromJson(object['user']),
-        pegawai: Pegawai.fromJson(object['pegawai']),
+        pegawai: Pegawai.fromJson(object['Pegawai']),
       );
     } else if (object['Member'] !=   null) {
       return LoginUser(
@@ -26,7 +26,7 @@ class LoginUser{
     } else if (object['Instruktur'] !=   null) {
       return LoginUser(
         user: User.fromJson(object['user']),
-        instruktur: Instruktur.fromJson(object['instruktur'])//object ['instruktur']['id_instruktur'].toString(),
+        instruktur: Instruktur.fromJson(object['Instruktur'])//object ['instruktur']['id_instruktur'].toString(),
       );
     } else {
       return LoginUser(

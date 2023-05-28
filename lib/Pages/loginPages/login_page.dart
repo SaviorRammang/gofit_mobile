@@ -76,14 +76,15 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () async {
                 setState(() {});
                 LoginUser? loginUser= await AuthApi().login(email: emailControl.text, password: passwordControl.text);
-                if(loginUser!.member != null){
                   context.read<AppBloc>().add(LoginSubmitted(loginUser: loginUser));
+                inspect(AppState());
+                if(loginUser?.member != null){
                   Navigator.pushNamed(context, '/homemember');
                 }
-                if(loginUser.instruktur != null){
+                if(loginUser?.instruktur != null){
                   Navigator.pushNamed(context, '/homeinstruktur');
                 } 
-                if(loginUser.pegawai != null) {
+                if(loginUser?.pegawai != null) {
                   Navigator.pushNamed(context, '/homepegawai');
                 } 
               },
@@ -132,7 +133,10 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   _forgotPassword(context) {
-    return TextButton(onPressed: () {}, child: Text("Forgot password?"));
+    return TextButton(onPressed: () {
+      Navigator.pushNamed(context, '/umuminformasi');
+    }, 
+    child: Text("Informasi Umum ? "));
   }
 
   _signup(context) {

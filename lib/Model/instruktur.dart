@@ -7,8 +7,10 @@ class Instruktur{
   final String noTelp;
   final String alamatInstruktur;
   final String emailInstruktur;
+  final String jumlahKeterlambatan;
 
-  Instruktur({required this.id,required this.idUser, required this.namaInstruktur,required this.usernameInstruktur, required this.alamatInstruktur,required this.emailInstruktur, required this.noTelp});
+
+  Instruktur({required this.id,required this.idUser, required this.namaInstruktur,required this.usernameInstruktur, required this.alamatInstruktur,required this.emailInstruktur, required this.noTelp, required this.jumlahKeterlambatan});
 
   factory Instruktur.fromJson(Map<String,dynamic> json){
     return Instruktur(
@@ -19,6 +21,7 @@ class Instruktur{
       noTelp : json['no_telp_instruktur']?.toString() ?? '',
       emailInstruktur : json['email_instruktur']?.toString() ?? '',
       alamatInstruktur : json['alamat_instruktur']?.toString() ?? '',
+      jumlahKeterlambatan : json['jumlah_keterlambatan_instruktur']?.toString() ?? '',
     );
   }
 }

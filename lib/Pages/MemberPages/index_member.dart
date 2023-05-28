@@ -5,6 +5,7 @@ import 'package:gofit_10662/Api/booking_gym_api.dart';
 import 'package:gofit_10662/Model/booking_gym.dart';
 import 'package:gofit_10662/Bloc/app_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 class IndexMember extends StatefulWidget {
   const IndexMember({super.key});
 
@@ -69,7 +70,9 @@ class _IndexMemberState extends State<IndexMember> {
                 padding: const EdgeInsets.all(3.0),
                 child: Text( 'Tanggal Yang di Booking :  ${b.tanggalYangDiBookig}', style: TextStyle( fontWeight: FontWeight.bold),),
               ),
-              ElevatedButton(onPressed: (){}, child: Text('Batalin Booking')),
+              ElevatedButton(onPressed: (){
+                // bookingGymApi.
+              }, child: Text('Batalin Booking')),
             ],
           ),
           ),

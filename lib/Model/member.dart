@@ -9,8 +9,9 @@ class Member{
   final String tanggalKedaluwarsa; //* dari aktivasi ingat banggg
   final String noTelp;
   final String alamatMember;
+  final String  saldoDeposit;
 
-  Member({required this.id,required this.idUser, required this.namaMember,required this.usernameMember,required this.tanggalLahirMember, required this.emailMember,required this.alamatMember,required this.noTelp,required this.tanggalKedaluwarsa, });
+  Member({required this.id,required this.idUser, required this.namaMember,required this.usernameMember,required this.tanggalLahirMember, required this.emailMember,required this.alamatMember,required this.noTelp,required this.tanggalKedaluwarsa, required this.saldoDeposit});
 
   factory Member.fromJson(Map<String,dynamic> json){
     return Member(
@@ -23,6 +24,7 @@ class Member{
       alamatMember : json['alamat_member']?.toString() ?? '',
       tanggalLahirMember : json['tanggal_lahir_member']?.toString() ?? '',
       tanggalKedaluwarsa : json['tanggal_aktivasi_member']?.toString() ?? '',
+      saldoDeposit: json['saldo_deposit_member']?.toString() ??'',
     );
   }
 }

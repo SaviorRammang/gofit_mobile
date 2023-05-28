@@ -5,6 +5,7 @@ import 'package:gofit_10662/Bloc/app_bloc.dart';
 import 'package:gofit_10662/Pages/MemberPages/booking_gym_member.dart';
 import 'package:gofit_10662/Pages/MemberPages/index_member.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gofit_10662/Pages/MemberPages/profile_member.dart';
 
 
 
@@ -15,12 +16,14 @@ class HomePageMember extends StatefulWidget {
 
 class _HomePageMemberState extends State<HomePageMember> {
   int _selectedNavbar = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
+  static  List<Widget> _widgetOptions = <Widget>[
     IndexMember(),
     Text(
       'Booking kelas',
     ),
     BookingGymPage(),
+    ProfileMemberScreen()
+
   ];
 
   @override
